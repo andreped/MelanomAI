@@ -29,6 +29,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  get: ^4.1.4
+  camera:
+    git:
+      url: https://github.com/camsim99/plugins.git
+      path: packages/camera/camera
+      ref: issue_89578_dev
 
 
   # The following adds the Cupertino Icons font to your application.

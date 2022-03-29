@@ -1,5 +1,5 @@
-name: melanom.ai
-description: An app that enables the user to detect and classify moles using the mobile camera.
+name: melanomai
+description: An app for automatic instance segmentation of melanoma using the mobile camera.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.

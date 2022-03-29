@@ -1,5 +1,5 @@
-name: testproject
-description: A new Flutter project.
+name: melanom.ai
+description: An app that enables the user to detect and classify moles using the mobile camera.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.

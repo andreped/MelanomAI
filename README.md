@@ -1,6 +1,10 @@
 # melanom.ai
 Mobile app for Android and iOS for real-time, automatic melanoma detection and classification using a mobile camera.
 
+<p align="center" width="100%">
+<img src="assets/figures/app-example1.png" width="20%" height="20%"> <img src="assets/figures/app-example2.png" width="19.5%" height="19.5%">
+</p>
+
 ## ToDo
 * [x] Setup App development environment (ended up using Android Studio and Flutter for cross-platform dev)
 * [x] Setup access to mobile camera

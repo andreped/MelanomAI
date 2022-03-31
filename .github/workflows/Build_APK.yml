@@ -21,8 +21,8 @@ jobs:
         with:
           flutter-version: '2.10.4'
       - run: flutter pub get
-      - run: flutter build apk
-      - run: flutter build appbundle
+      - run: flutter build apk --debug
+      - run: flutter build appbundle --debug
 
       # Upload generated apk to the artifacts.
       - uses: actions/upload-artifact@v1

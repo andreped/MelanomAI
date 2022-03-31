@@ -3,6 +3,7 @@ name: Build and upload IPA (iOS) mobile app
 on:
   push:
     tags:
+      - '*'
 
 jobs:
   build:

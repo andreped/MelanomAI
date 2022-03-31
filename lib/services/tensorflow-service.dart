@@ -66,5 +66,6 @@ class TensorflowService {
 
   void dispose() async {
     this._recognitionController.close();
+    Tflite.close();
   }
 }

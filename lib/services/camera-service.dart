@@ -25,6 +25,8 @@ class CameraService {
       cameraDescription,
       // Define the resolution to use.
       ResolutionPreset.medium,
+      // disable request of audio, which is not needed.
+      enableAudio: false,
     );
 
     // Next, initialize the controller. This returns a Future.
@@ -33,7 +35,8 @@ class CameraService {
 
   }
 
-  dispose() {
+  // @TODO: should there be a "void" here? and what about close? Are we properly destroying all objects?
+  void dispose() async {
     _cameraController.dispose();
   }
 

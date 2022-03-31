@@ -116,6 +116,9 @@ class HomeState extends State<Home> with TickerProviderStateMixin, WidgetsBindin
 
   @override
   void dispose() {
+    // perhaps stop inference/streaming before disposing?
+    stopRecognitions();
+
     // Dispose of the controller when the widget is disposed.
     _cameraService.dispose();
     _tensorflowService.dispose();

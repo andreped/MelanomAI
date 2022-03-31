@@ -15,6 +15,8 @@ Mobile app for Android and iOS for real-time, automatic melanoma detection and c
 * [ ] Try to improve inference speed (currently, FPS: ~ 4.5)
 * [ ] Add mole detection model/method
 * [ ] Switch current MobileNetV1 model with melanoma classification model
+* [ ] Bug: microphone seems to be needed in order to use the app
+* [ ] Bug: When "closing" app, it is only minimized, not properly closed (should have listener threads which handles exceptions when app is minimized)
 
 ## Credit
 As I know fuck all about Flutter nor mobile app development, I have taken great inspiration from other open-source projects in the development of my app. These were:

@@ -1,12 +1,8 @@
 name: Build and upload IPA (iOS) mobile app
 
-#on:
-#  push:
-#    branches:
-#      - '*'
-#  pull_request:
-#    branches:
-#      - '*'
+on:
+  push:
+    tags:
 
 jobs:
   build:

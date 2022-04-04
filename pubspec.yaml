@@ -36,7 +36,7 @@ dependencies:
       path: packages/camera/camera
       ref: issue_89578_dev
   image_picker: ^0.8.4+11
-  tflite: ^1.1.1
+  tflite: ^1.1.2
   path_provider:
   path:
 
@@ -74,6 +74,11 @@ flutter:
     - assets/white_logo.png
     - assets/labels.txt
     - assets/mobilenet_v1_1.0_224-streamer.tflite
+    - assets/ssd_mobilenet.tflite
+    - assets/ssd_mobilenet.txt
+    - assets/yolov2_tiny.tflite
+    - assets/yolov2_tiny.txt
+    - assets/posenet_mv1_075_float_from_checkpoints.tflite
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

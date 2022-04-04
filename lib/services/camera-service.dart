@@ -24,7 +24,7 @@ class CameraService {
       // Get a specific camera from the list of available cameras.
       cameraDescription,
       // Define the resolution to use.
-      ResolutionPreset.medium,
+      ResolutionPreset.high,
       // disable request of audio, which is not needed.
       enableAudio: false,
     );

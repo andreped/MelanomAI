@@ -7,7 +7,7 @@ void main() async {
   // Obtain a list of the available cameras on the device.
   final cameras = await availableCameras();
   runApp(MyApp(cameras: cameras));
-}file
+}
 
 class MyApp extends StatelessWidget {
   final List<CameraDescription> cameras;

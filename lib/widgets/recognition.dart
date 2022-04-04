@@ -1,6 +1,7 @@
 import 'dart:async';
 import '../services/tensorflow-service.dart';
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class Recognition extends StatefulWidget {
   Recognition({Key? key, required this.ready}) : super(key: key);
@@ -23,7 +24,7 @@ class _RecognitionState extends State<Recognition> {
   StreamSubscription? _streamSubscription;
 
   // initialize FPS
-  String fpsValue = "0.0";
+  double fpsValue = 0.0;
   double count = 0;
   double timer = 0;
 
@@ -93,14 +94,15 @@ class _RecognitionState extends State<Recognition> {
   Widget _titleWidget() {
 
     if (_currentRecognition.isNotEmpty) {
-      // measure fps based on a running average
       count++;
+      // measure fps based on a running average
       //timer = (timer * (count - 1) + 1.0 / (stopwatch.elapsedMilliseconds.toDouble() / 1000)) / count;
 
-      // measure fps
-      //fpsValue = timer.toStringAsFixed(1);
+      // simple FPS count
+      //fpsValue = (1.0 / (stopwatch.elapsedMilliseconds.toDouble() / 1000)).toStringAsFixed(1);
 
-      fpsValue = (1.0 / (stopwatch.elapsedMilliseconds.toDouble() / 1000)).toStringAsFixed(1);
+      // exponential weighted moving average
+      fpsValue += (1.0 / (stopwatch.elapsedMilliseconds / 1000) - fpsValue) / min(count, 2);  // smoothing = 2
 
       // reset stopwatch
       stopwatch.stop();
@@ -114,7 +116,7 @@ class _RecognitionState extends State<Recognition> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Text(
-            "Recognitions, FPS: " + fpsValue,
+            "Recognitions, FPS: " + fpsValue.toStringAsFixed(1),
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
           ),
         ],

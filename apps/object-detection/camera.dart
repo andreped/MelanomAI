@@ -32,6 +32,7 @@ class _CameraState extends State<Camera> {
       controller = new CameraController(
         widget.cameras[0],
         ResolutionPreset.high,
+        enableAudio: false,
       );
       controller.initialize().then((_) {
         if (!mounted) {

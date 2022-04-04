@@ -27,6 +27,7 @@ class _RecognitionState extends State<Recognition> {
   double fpsValue = 0.0;
   double count = 0;
   double timer = 0;
+  int smoothing = 20;
 
   // tensorflow service injection
   TensorflowService _tensorflowService = TensorflowService();
@@ -102,7 +103,7 @@ class _RecognitionState extends State<Recognition> {
       //fpsValue = (1.0 / (stopwatch.elapsedMilliseconds.toDouble() / 1000)).toStringAsFixed(1);
 
       // exponential weighted moving average
-      fpsValue += (1.0 / (stopwatch.elapsedMilliseconds / 1000) - fpsValue) / min(count, 2);  // smoothing = 2
+      fpsValue += (1.0 / (stopwatch.elapsedMilliseconds / 1000) - fpsValue) / min(count, smoothing);
 
       // reset stopwatch
       stopwatch.stop();

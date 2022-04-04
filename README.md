@@ -14,7 +14,7 @@ Mobile app for Android and iOS for real-time, automatic melanoma detection and c
 * [x] Setup APK build
 * [x] Build APK on the cloud using GitHub Actions (CI)
 * [x] Test built APK (in debug mode) on new Android device (works!)
-* [x] Try to improve inference speed (currently, FPS: ~ 4.8, using GPU)
+* [x] Try to improve inference speed (currently, FPS: ~ 4.8, using GPU twice as fast as CPU)
 * [x] Add exponential smoothed running average
 * [x] Bug: microphone seems to be needed in order to use the app
 * [ ] Bug: memory leak - something fails to be destroyed for each image during inference

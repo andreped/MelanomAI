@@ -14,12 +14,13 @@ Mobile app for Android and iOS for real-time, automatic melanoma detection and c
 * [x] Setup APK build
 * [x] Build APK on the cloud using GitHub Actions (CI)
 * [x] Test built APK (in debug mode) on new Android device (works!)
+* [x] Try to improve inference speed (currently, FPS: ~ 4.8, using GPU)
+* [x] Add exponential smoothed running average
+* [x] Bug: microphone seems to be needed in order to use the app
 * [ ] Bug: memory leak - something fails to be destroyed for each image during inference
 * [ ] Bug: app does not gracefully exit
-* [ ] Try to improve inference speed (currently, FPS: ~ 4.5)
 * [ ] Add mole detection model/method
 * [ ] Switch current MobileNetV1 model with melanoma classification model
-* [ ] Bug: microphone seems to be needed in order to use the app
 * [ ] Bug: When "closing" app, it is only minimized, not properly closed (should have listener threads which handles exceptions when app is minimized)
 
 ## Credit

@@ -34,24 +34,31 @@ class _HomePageState extends State<HomePage> {
         res = await Tflite.loadModel(
           model: "assets/yolov2_tiny.tflite",
           labels: "assets/yolov2_tiny.txt",
+          useGpuDelegate: true,
         );
         break;
 
       case mobilenet:
         res = await Tflite.loadModel(
             model: "assets/mobilenet_v1_1.0_224.tflite",
-            labels: "assets/mobilenet_v1_1.0_224.txt");
+            labels: "assets/mobilenet_v1_1.0_224.txt",
+            useGpuDelegate: true,
+        );
         break;
 
       case posenet:
         res = await Tflite.loadModel(
-            model: "assets/posenet_mv1_075_float_from_checkpoints.tflite");
+            model: "assets/posenet_mv1_075_float_from_checkpoints.tflite",
+          useGpuDelegate: true,
+        );
         break;
 
       default:
         res = await Tflite.loadModel(
             model: "assets/ssd_mobilenet.tflite",
-            labels: "assets/ssd_mobilenet.txt");
+            labels: "assets/ssd_mobilenet.txt",
+            useGpuDelegate: true,
+        );
     }
     print(res);
   }

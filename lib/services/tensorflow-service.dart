@@ -26,6 +26,7 @@ class TensorflowService {
       await Tflite.loadModel(
         model: "assets/mobilenet_v1_1.0_224-streamer.tflite",
         labels: "assets/labels.txt",
+        useGpuDelegate: true,
       );
       _modelLoaded = true;
     } catch (e) {

@@ -1,6 +1,11 @@
 # melanom.ai
 Mobile app for Android and iOS for real-time, automatic melanoma detection and classification using a mobile camera.
 
+This was only a toy project for me to get to know Flutter. I did not finish the project, but as I managed to get the 
+real-time image classifier working, I'm making the code public, as it could be of value to others.
+
+Note that the continuous integration (CI; GitHub Actions) stuff never worked, but it should work fine if you build the app locally.
+
 <p align="center" width="100%">
 <img src="assets/figures/app-example1.png" width="20%" height="20%"> <img src="assets/figures/app-example2.png" width="19.5%" height="19.5%">
 </p>
